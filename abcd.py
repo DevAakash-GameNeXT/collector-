@@ -1,7 +1,5 @@
 import asyncio
 from playwright.async_api import async_playwright
-import aiofiles
-import asyncio
 from asyncio import Semaphore
 
 Leads = [
