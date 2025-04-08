@@ -75,10 +75,9 @@ async def main():
 
         await browser.close()
 
-    async with aiofiles.open("leads.txt", "w") as f:
-        for link in sorted(URL):
-            await f.write(link + "\n")
-
+        with open("leads.txt", "w") as f:
+            for link in sorted(URL):
+                f.write(link + "\n")
     print(f"\n🎯 Total unique profiles found: {len(URL)}\n")
 
 asyncio.run(main())
